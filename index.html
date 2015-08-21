@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+	<title>TO-DO LIST</title>
+	<meta name='description' content="">
+    <meta name='keywords' content="">
+    <meta name='robots' content='index, follow'>
+    <meta name='language' content='ES'>
+
+	<!-- JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+	<script src="handlebars.js"></script>
+	<script src="controlador.js"></script>
+
+	<!-- CSS -> -->
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div id="cuadro1">
+		<span>Adjuntar Notas con</span><br>
+		<span id="titulo">FIREBASE</span >
+		
+	</div>
+	<div  id="cuadro2">
+		<input type="text" id="TextoAdjuntar" class="botones">
+		<input type="submit" id="Adjuntar" class="botones" value="Crear/Editar">
+		<input type="submit" id="Eliminar" class="botones" value="Eliminar">
+		<br><br>
+		<div id="Area"></div>
+  		<input id="valoropcion" type="text" style="display:none;">
+</body>
+</html>
+
+<script id="AreaHandleBars" type="text/x-handlebars-template">
+  <div>
+  	<input 
+  			id="{{codigo}}" 
+  			name="notas" 
+  			value="{{codigo}}" 
+  			type="radio">
+  	<label for="{{codigo}}">{{mensaje}}</label>
+  </div>
+</script>
